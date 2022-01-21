@@ -12,13 +12,15 @@
  * - Для добавление нового элемента в конец массива используйте метод push.
  */
 
-const array = [1, 2, -4, 3, -9, -1, 7];
+const array = [1, 2, -4, 3, 'df', -9, -1, 7];
 
 // Решение
 const isPositive = (num) => {
-  return isNaN(num)
-    ? 'Error: parameter type is not a Number'
-    : num > 0 ? true : false
+  if (isNaN(num)) {
+    console.log('Error: parameter type is not a Number')
+    return false
+  }
+  return num > 0 ? true : false
 }
 const newArr = []
 for (el of array) {
