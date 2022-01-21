@@ -15,6 +15,19 @@
 const array = [1, 2, -4, 3, -9, -1, 7];
 
 // Решение
+const isPositive = (num) => {
+  return isNaN(num)
+    ? 'Error: parameter type is not a Number'
+    : num > 0 ? true : false
+}
+const newArr = []
+for (el of array) {
+  if (isPositive(el)) {
+    newArr.push(el)
+  }
+}
+
+console.log(newArr)
 
 /* не удалять */
 isPositive(-3); // false
