@@ -38,13 +38,13 @@ function CleanerRobot(
     );
 
     /* Для удобства время уборки сокращено до формата 1 час = 1 секунда */
-    this.timerId = setTimeout(onReady, cleaningTime * 1000);
+    timerId = setTimeout(onReady, cleaningTime * 1000);
   };
 
   // Решение
   this.stop = () => {
     console.log(`Уборка завершена досрочно. Осталось заряда батареи: ${energy - getCleaningTime()}.`)
-    clearTimeout(this.timerId)
+    clearTimeout(timerId)
   }
 }
 
