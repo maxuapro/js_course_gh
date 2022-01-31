@@ -17,6 +17,9 @@
 
 // Решение
 const postpone = (start, end, delay) => {
+  if (![start, end, delay].every(el => typeof el === 'number')) {
+    throw new Error('Arguments should be of type Number (start, end, delay)')
+  }
 
   const normal = start < end
 
@@ -53,7 +56,7 @@ postpone(1, 3, 1000);
 // 1
 // 2
 // 3
-postpone(3, 1, 1000);
+// postpone(3, 1, 1000);
 // 3
 // 2
 // 1
