@@ -44,7 +44,7 @@ const postpone = (start, end, delay) => {
   }
 
   let del = 0
-  for (let i = 0; i <= theRange.length - 1; i++) {
+  for (let i = 0; i < theRange.length; i++) {
     del += delay
     setTimeout(() => {
       console.log(theRange[i])
@@ -56,7 +56,7 @@ postpone(1, 3, 1000);
 // 1
 // 2
 // 3
-// postpone(3, 1, 1000);
+postpone(3, 1, 1000);
 // 3
 // 2
 // 1
