@@ -88,7 +88,7 @@ class DB {
     if (arguments.length > 0) {
       throw new Error('There should be no arguments')
     }
-    return this.data
+    return [...this.data.values()]
   }
   update(id, val) {
     if (!isValidObject(val)) {

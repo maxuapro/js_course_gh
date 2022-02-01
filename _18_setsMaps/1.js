@@ -82,7 +82,7 @@ class DB {
     if (arguments.length > 0) {
       throw new Error('There should be no arguments')
     }
-    return this.data
+    return [...this.data.values()]
   }
   update(id, val) {
     if (!isValidObject(val)) {
@@ -118,4 +118,4 @@ const customers = db.readAll(); // массив пользователей
 db.update(id, { age: 99 }); // id
 // db.delete(id); // true
 
-console.log(customers, id)
+console.log(customers)
