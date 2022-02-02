@@ -19,7 +19,7 @@ const getCustomers = (customersArr, countriesArr) => {
   return new Promise((resolve, reject) => {
     const newArr = []
     for (let i = 0; i < customersArr.length; i++) {
-      let isCool = customersArr[i].id === countriesArr[i].id && customersArr[i]
+      let isCool = customersArr[i].id === countriesArr[i].id
       if (!isCool) {
         reject(`We don't have information about country for this customer: ${customersArr[i].name}`)
       }
